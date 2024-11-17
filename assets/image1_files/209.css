@@ -1,0 +1,16 @@
+.authenticatedEngagementComponent .rs-RecommendedVideoCard > .rds-Card-content {
+  padding: var(--rds-size-spacing-inset-sm) 0;
+}
+
+.authenticatedEngagementComponent .rs-RecommendedVideoCard .jwplayer {
+  border-radius: var(--rds-size-radius-lg);
+}
+
+.authenticatedEngagementComponent .rs-RecommendedVideoCard .jw-state-idle .jw-controls {
+  background: transparent;
+}
+
+.authenticatedEngagementComponent .rs-RecommendedVideoCard .jw-controls-backdrop {
+  display: none;
+}
+
