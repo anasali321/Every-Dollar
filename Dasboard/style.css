@@ -1,0 +1,257 @@
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #0073b9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar .nav {
+  list-style: none;
+}
+
+.sidebar .nav li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar .nav li.active,
+.sidebar .nav li:hover {
+  color: #ffc107;
+}
+
+.sidebar .advisor {
+  text-align: center;
+}
+
+.sidebar .advisor button {
+  background: #ffc107;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header .header-left h1 {
+  font-size: 24px;
+}
+
+header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+header .header-right img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Charts Section */
+.charts {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 85%;
+  /* max-width: 800px; */
+  margin: 50px auto;
+  background: #CBDCEB;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 350px;
+}
+
+.chart-container h1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #133E87;
+  margin-top: 0px;
+}
+
+.chart-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chart-buttons button {
+  padding: 9px 15px;
+  margin-bottom: 5px;
+  background-color: #608BC1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.chart-buttons button.active {
+  background-color: #133E87;
+  color: #fff;
+  border-color: #133E87;
+}
+
+/* Canvas Styling */
+.chart-container canvas {
+  max-width: 100% !important;
+  height: 70% !important;
+}
+
+.data-cards {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center align cards */
+}
+
+.card {
+  flex: 1; /* Cards share equal space */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Spread content evenly */
+  text-align: center;
+  height: 410px; /* Fixed height for consistency */
+  min-width: 300px; /* Minimum width for cards */
+  overflow: hidden; /* Prevent overflowing elements */
+}
+
+.card canvas {
+  width: 100%; /* Make canvas responsive */
+  max-width: 250px; /* Limit the width of the chart */
+  height: 0px; /* Explicit height for canvas */
+  margin-top: 10px; /* Add space between text and chart */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 0px; /* Slight space between title and value */
+  margin-top: 0px;
+}
+
+.card h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 0px; /* Space below the value */
+  margin-top: 0px;
+} 
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 15px; /* Reduce padding */
+    margin-bottom: 20px; /* Space between stacked cards */
+  }
+
+  /* .card h3 {
+    font-size: 16px; /* Slightly smaller title font 
+  }
+
+  .card h1 {
+    font-size: 20px; /* Slightly smaller value font 
+  } */
+
+  .card canvas {
+    max-width: 200px; /* Reduce chart size */
+    height: 40px; /* Reduce height proportionally */
+  }
+}
+
+
+/*.third-card {
+  /* align-items: center;
+  justify-content: space-between; */
+  /* margin-bottom: 50px; 
+}*/
+
+.third-card div {
+  flex: 0.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 75%;
+}
+
+/* Action Plans */
+.action-plan {
+  margin-top: 20px;
+}
+
+.plan {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plan-item {
+  margin-bottom: 10px;
+}
+
+.plan-item span {
+  display: block;
+  font-size: 14px;
+}
+
+progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+}
