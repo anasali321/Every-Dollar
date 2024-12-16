@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">Every Dollar</div>
+      <ul class="nav">
+          <li class="active">
+            <i class="fa-solid fa-chart-line"></i> Dashboard
+          </li>
+          <li>
+            <i class="fa-solid fa-coins"></i> Net Worth
+          </li>
+          <li>
+            <i class="fa-solid fa-wallet"></i> Budget
+          </li>
+          <li>
+            <i class="fa-solid fa-bank"></i> Action Plan / Goals
+          </li>
+          <li>
+            <i class="fa-solid fa-user-tie"></i> Financial Reports
+          </li>
+          <li>
+            <i class="fa-solid fa-list-check"></i> My Account
+          </li>
+      </ul>
+      <!-- <div class="advisor">
+        <p>Speak with advisor</p>
+        <button>Get started</button>
+      </div> -->
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Header -->
+      <header>
+        <div class="header-left">
+          <h1>Dashboard</h1>
+          <p>Wednesday, February 22, 2023</p>
+        </div>
+        <div class="header-right">
+          <img src="https://via.placeholder.com/40" alt="User">
+          <span>Anas Ali</span>
+        </div>
+      </header>
+
+      <!-- Charts Section -->
+      <div class="chart-container">
+        <h1>Financial Analysis</h1>
+        <div class="chart-buttons">
+          <button id="btnNetWorth" class="active">Net Worth</button>
+          <button id="btnAssets">Assets</button>
+          <button id="btnDebt">Debt</button>
+        </div>
+        <canvas id="lineChart"></canvas>
+      </div>
+      
+      
+
+      <!-- Data Cards -->
+      <section class="data-cards">
+        <div class="card">
+          <h3>Asset Value</h3>
+          <h1>$625,375</h1>
+          <canvas id="assetChart"></canvas>
+        </div>
+        <div class="card">
+          <h3>Debt Value</h3>
+          <h1>$375,375</h1>
+          <canvas id="debtChart"></canvas>
+        </div>
+        <div class="card third-card">
+          <div class="card small">
+            <h3>Income</h3>
+            <h1>$10,448</h1>
+          </div>
+          <div class="card small">
+            <h3>Spending</h3>
+            <h1>$2,875</h1>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- Action Plan Section -->
+      <section class="action-plan">
+        <div class="plan">
+          <h3>Action Plans</h3>
+          <div class="plan-item">
+            <span>Buy a car</span>
+            <progress value="25000" max="30000"></progress>
+          </div>
+          <div class="plan-item">
+            <span>Wedding</span>
+            <progress value="20000" max="30000"></progress>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="App.js"></script>
+</body>
+</html>
