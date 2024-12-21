@@ -21,7 +21,7 @@ document.getElementById('loginForm').addEventListener('submit', (event) => {
     .then(response => {
         if (response.ok) {
             // Handle successful login (e.g., redirect to dashboard)
-            window.location.href = '../index.js'; // replace it with the dashboard
+            window.location.href = '../../Dasboard/index.html'; // replace it with the dashboard
         } else {
             // Handle login failure
             alert('Login failed. Please check your credentials.');

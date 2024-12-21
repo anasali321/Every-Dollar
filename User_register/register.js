@@ -35,7 +35,7 @@ document.querySelector('#forms').addEventListener('submit', (event) => {
                 // Handle successful registration
                 alert('Registration successful!');
                 // Redirect to login page or other desired page
-                window.location.href = '/User_login/login.html';
+                window.location.href = '../User_login/login.html';
             } else {
                 // Handle registration errors
                 alert('Registration failed. Please try again.');

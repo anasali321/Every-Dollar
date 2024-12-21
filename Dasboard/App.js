@@ -156,7 +156,7 @@ new Chart(debtCtx, {
       },
     ],
   },
-});
+}); 
 
 
 

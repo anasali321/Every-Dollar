@@ -91,6 +91,10 @@ body {
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+.SideLinks {
+  text-decoration: none;
+  color: white;
+}
 
 .sidebar .advisor button:hover {
   background: #e0a800;
