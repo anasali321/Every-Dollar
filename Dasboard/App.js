@@ -8,10 +8,10 @@ const chartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{
       label: 'Net Worth ($)',
-      data: [0, 50000, 100000, 250000, 400000, 600000, 700000, 750000, 800000, 850000, 900000, 1000000],
+      data: [0, 50000, 100000, 250000, 400000, 600000, 700000, 350000, 800000, 850000, 400000, 1000000],
       borderColor: '#608BC1',
-      // backgroundColor: 'rgba(51, 179, 166, 0.1)',
-      backgroundColor: '#e4eef6',
+      backgroundColor: 'rgba(51, 179, 166, 0.1)',
+      // backgroundColor: '#d9e5f2',
       fill: true,
       tension: 0.4,
       pointBackgroundColor: '#133E87',
@@ -24,12 +24,12 @@ const chartData = {
     datasets: [{
       label: 'Assets ($)',
       data: [50000, 70000, 120000, 300000, 450000, 650000, 800000, 850000, 900000, 950000, 970000, 1000000],
-      borderColor: '#4caf50',
+      borderColor: '#608BC1',
       backgroundColor: 'rgba(76, 175, 80, 0.1)',
       fill: true,
       tension: 0.4,
-      pointBackgroundColor: '#4caf50',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#133E87',
+      pointBorderColor: '#133E87',
       pointRadius: 5
     }]
   },
@@ -38,12 +38,12 @@ const chartData = {
     datasets: [{
       label: 'Debt ($)',
       data: [30000, 40000, 60000, 80000, 100000, 120000, 140000, 150000, 160000, 170000, 180000, 200000],
-      borderColor: '#f44336',
+      borderColor: '#608BC1',
       backgroundColor: 'rgba(244, 67, 54, 0.1)',
       fill: true,
       tension: 0.4,
-      pointBackgroundColor: '#f44336',
-      pointBorderColor: '#fff',
+      pointBackgroundColor: '#133E87',
+      pointBorderColor: '#133E87',
       pointRadius: 5
     }]
   }
@@ -134,11 +134,11 @@ const assetCtx = document.getElementById("assetChart").getContext("2d");
 new Chart(assetCtx, {
   type: "doughnut",
   data: {
-    labels: ["Savings", "Investments", "Real Estate"],
+    labels: ["Property", "Investments", "Cash"],
     datasets: [
       {
         data: [40, 30, 30],
-        backgroundColor: ["#4caf50", "#2196f3", "#ffc107"],
+        backgroundColor: ["#3ABEF9", "#A7E6FF", "#3572EF"],
       },
     ],
   },
@@ -148,11 +148,11 @@ const debtCtx = document.getElementById("debtChart").getContext("2d");
 new Chart(debtCtx, {
   type: "doughnut",
   data: {
-    labels: ["Mortgage", "Credit Card", "Loans"],
+    labels: ["Personal", "Business", "Government"],
     datasets: [
       {
-        data: [40, 40, 20],
-        backgroundColor: ["#f44336", "#ff9800", "#9c27b0"],
+        data: [15, 55, 30],
+        backgroundColor: ["#3572EF", "#3ABEF9", "#A7E6FF"],
       },
     ],
   },

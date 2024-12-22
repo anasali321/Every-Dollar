@@ -11,7 +11,7 @@
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">Every Dollar</div>
+      <div class="logo"><img src="../logo.png" alt=""></div>
       <ul class="nav">
           <li >
             <a href="../index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
@@ -53,7 +53,80 @@
     
     <!-- Main Content -->
     <main class="main">
-      
+      <div class="container">
+        <!-- Header Divs for Assets, Debts, and Net Worth -->
+        <div class="header-div">
+          <div>
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Total Assets</span>
+            <div id="headerTotalAssets" class="total">$0</div>
+          </div>
+          <div>
+            <i class="fas fa-credit-card"></i>
+            <span>Total Debts</span>
+            <div id="headerTotalDebts" class="total">$0</div>
+          </div>
+          <div>
+            <i class="fas fa-chart-line"></i>
+            <span>Net Worth</span>
+            <div id="headerNetWorth" class="total">$0</div>
+          </div>
+        </div>
+    
+        <!-- Top Div for Net Worth -->
+        <div class="top-div">
+          <span id="netWorth">Net Worth: $0</span>
+        </div>
+    
+        <!-- Bottom Div with Assets and Debts -->
+        <div class="bottom-div">
+          <!-- Assets Section -->
+          <div class="section" id="assets">
+            <h2><i class="fas fa-piggy-bank"></i> Assets</h2>
+            <div class="item">
+              <label for="investment">Investments:</label>
+              <input type="number" id="investment" value="0">
+            </div>
+            <div class="item">
+              <label for="property">Property:</label>
+              <input type="number" id="property" value="0">
+            </div>
+            <div class="item">
+              <label for="cash">Cash:</label>
+              <input type="number" id="cash" value="0">
+            </div>
+            <div class="add-item">
+              <input type="text" id="newAssetName" placeholder="New Asset Name">
+              <input type="number" id="newAssetValue" placeholder="Value">
+              <button onclick="addAsset()">Add Asset</button>
+            </div>
+            <div class="total" id="totalAssets">Total Assets: $0</div>
+          </div>
+    
+          <!-- Debts Section -->
+          <div class="section" id="debts">
+            <h2><i class="fas fa-credit-card"></i> Debts</h2>
+            <div class="item">
+              <label for="creditCards">Personal Debt:</label>
+              <input type="number" id="creditCards" value="0">
+            </div>
+            <div class="item">
+              <label for="bankLoan">Business Debt:</label>
+              <input type="number" id="bankLoan" value="0">
+            </div>
+            <div class="item">
+              <label for="bankLoan">Government Debt:</label>
+              <input type="number" id="bankLoan" value="0">
+            </div>
+            <div class="add-item">
+              <input type="text" id="newDebtName" placeholder="New Debt Name">
+              <input type="number" id="newDebtValue" placeholder="Value">
+              <button onclick="addDebt()">Add Debt</button>
+            </div>
+            <div class="total" id="totalDebts">Total Debts: $0</div>
+          </div>
+        </div>
+      </div>
   </main>
 </div>
 <script src="App.js"></script>

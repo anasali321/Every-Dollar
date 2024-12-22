@@ -40,6 +40,9 @@ body {
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 1px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /* Sidebar Navigation */

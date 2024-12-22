@@ -14,7 +14,7 @@ body {
 }
 
 /* Container */
-.container {
+.containers {
   display: flex;
   width: 100%;
 }
@@ -40,6 +40,9 @@ body {
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 1px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8.5px;
 }
 
 /* Sidebar Navigation */
@@ -103,6 +106,7 @@ body {
   padding: 20px;
   padding-left: 275px;
   padding-top: 0;
+  margin-top: 60px;
 }
 
 /* Header */
@@ -155,4 +159,233 @@ header .header-right span {
 .sidebar .advisor button,
 header {
   transition: all 0.3s ease;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+} */
+
+/* .img {
+  height: 200px;
+  width: 300px;
+}
+
+.img img {
+  height: 170px;
+  width: 280px;
+} */
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #d9e5f2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.main .container h1 {
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+  padding: 15px;
+}
+
+.main .container .pp {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  padding: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #c0d9f4;
+  border-radius: 20px;
+}
+
+.goal-list {
+  margin-top: 2rem;
+}
+
+.goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #a7d1eb;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.goal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.goal-info {
+  flex: 2;
+}
+
+.goal-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.goal-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.progress {
+  flex: 1;
+  text-align: center;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0073b9, #0c7abf);
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  background-color: black;
+}
+
+.add-goal {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.add-goal input, .add-goal button {
+  padding: 0.8rem;
+  margin: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 13px;
+  font-size: 14px;
+  border: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-goal button {
+  background: #0073b9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  height: 43px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-goal button:hover {
+  background: #22615d;
+}
+
+.progress-graph {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #c0d9f4;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-graph h3 {
+  padding: 10px;
+  padding-top: 5px;
+}
+
+.graph {
+  height: 300px;
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff, #d9efff);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(45deg, #a7d1eb, #0c7abf);
+  border-radius: 8px 8px 0 0;
+  height: 100%;
+  animation: scaleBar 1.2s ease-out;
+}
+
+@keyframes scaleBar {
+  from {
+      transform: scaleY(0);
+  }
+  to {
+      transform: scaleY(1);
+  }
+}
+
+.bar span {
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.bar::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -25px;
+  font-size: 0.85rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.update-progress {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.update-progress input, .update-progress button {
+  padding: 0.8rem;
+  margin: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 13px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+.update-progress button {
+  background: #0073b9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  height: 43px;
+  width: 200px;
+}
+
+.update-progress button:hover {
+  background: #005a99;
 }
