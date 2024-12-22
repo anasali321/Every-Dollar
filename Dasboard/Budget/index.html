@@ -11,7 +11,7 @@
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">Every Dollar</div>
+      <div class="logo"><img src="../logo.png" alt=""></div>
       <ul class="nav">
           <li >
             <a href="../index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
@@ -53,7 +53,80 @@
     
     <!-- Main Content -->
     <main class="main">
+
+      <div class="salary-container">
+        <div class="input-container" id="salary-container">
+          <p class="result" id="salary-result"></p>
+          <label for="monthly-salary">Enter Monthly Income</label>
+          <input type="number" id="monthly-salary" placeholder="Monthly Income" />
+          <button id="action-button" onclick="handleSalary()">Add Income</button>
+      </div>
+        <div class="section">
+          <div class="img">
+            <img src="img-1.png" alt="">
+          </div>
+          </div>
+      </div>
       
+
+      
+
+      <!-- <div class="main-budget1">
+
+        <div class="section">
+          <h3>Bills</h3>
+          <ul class="item-list" id="bills-list">
+                Items will be added here 
+          </ul>
+          <button class="add-button" onclick="showPlaceholder('bills')">Add Item</button>
+          <div class="placeholder" id="bills-placeholder">
+              <input type="text" id="bills-item" placeholder="Item Name">
+              <input type="number" id="bills-amount" placeholder="Amount">
+              <button onclick="addItem('bills')">Add</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="img">
+            <img src="img-1.jpg" alt="">
+          </div>
+          </div>
+        </div>
+
+      </div> -->
+
+      <div class="budgeting">
+      <h2 class="h2">Budget Manager</h2>
+      <div class="main-budget">
+        
+
+        <div class="section">
+            <h3>Essential Expenses</h3>
+            <ul class="item-list" id="bills-list">
+                <!-- Items will be added here -->
+            </ul>
+            <button class="add-button" onclick="showPlaceholder('bills')">Add Item</button>
+            <div class="placeholder" id="bills-placeholder">
+                <input type="text" id="bills-item" placeholder="Item Name">
+                <input type="number" id="bills-amount" placeholder="Amount">
+                <button onclick="addItem('bills')">Add</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Optional Spending</h3>
+            <ul class="item-list" id="fun-list">
+                <!-- Items will be added here -->
+            </ul>
+            <button class="add-button" onclick="showPlaceholder('fun')">Add Item</button>
+            <div class="placeholder" id="fun-placeholder">
+                <input type="text" id="fun-item" placeholder="Item Name">
+                <input type="number" id="fun-amount" placeholder="Amount">
+                <button onclick="addItem('fun')">Add</button>
+            </div>
+        </div>
+      </div>
+      </div>
   </main>
 </div>
 <script src="App.js"></script>

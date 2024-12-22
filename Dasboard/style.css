@@ -40,6 +40,9 @@ body {
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 1px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8.5px;
 }
 
 /* Sidebar Navigation */
@@ -177,7 +180,7 @@ header {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
   text-align: center;
   height: 350px;
   /* padding-top: 30px; */
@@ -202,11 +205,12 @@ header {
   padding: 9px 15px;
   margin-bottom: 5px;
   background-color: #608BC1;
-  border: 1px solid #ddd;
+  border: 1px solid #608BC1;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .chart-buttons button.active {
@@ -217,25 +221,32 @@ header {
 
 /* Canvas Styling */
 .chart-container canvas {
-  max-width: 100% !important;
-  height: 70% !important;
+  max-width: 90% !important;
+  height: 60% !important;
 }
 
 .data-cards {
   display: flex;
   gap: 20px; /* Space between cards */
-  margin-top: 20px;
+  margin-top: 10px;
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
   justify-content: center; /* Center align cards */
+}
+
+.data-cards .small {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #e0eeff;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .card {
   flex: 1; /* Cards share equal space */
   padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #d9e5f2;;
+  /* border: 1px solid #d9e5f2; */
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,21 +260,22 @@ header {
 .card canvas {
   width: 100%; /* Make canvas responsive */
   max-width: 250px; /* Limit the width of the chart */
-  height: 0px; /* Explicit height for canvas */
-  margin-top: 10px; /* Add space between text and chart */
+  height: 5px; /* Explicit height for canvas */
+  margin-top: 0.5px; /* Add space between text and chart */
   box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+  border: none;
 }
 
 .card h3 {
   font-size: 18px;
-  color: #555;
+  color: #133E87;
   margin-bottom: 0px; /* Slight space between title and value */
   margin-top: 0px;
 }
 
 .card h1 {
   font-size: 24px;
-  color: #333;
+  color: #13336a;
   margin-bottom: 0px; /* Space below the value */
   margin-top: 0px;
 } 
@@ -307,18 +319,22 @@ header {
 
 /* Action Plans */
 .action-plan {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .plan {
-  background: white;
+  background: #d9e5f2;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .plan-item {
   margin-bottom: 10px;
+}
+
+.plan-item progress {
+  color: #13336a;
 }
 
 .plan-item span {
@@ -330,4 +346,16 @@ progress {
   width: 100%;
   height: 8px;
   border-radius: 4px;
+  background-color: #133E87;
+}
+
+/* For Webkit browsers (e.g., Chrome, Edge, Safari) */
+progress::-webkit-progress-bar {
+  background-color: #d9e5f2; /* Background of the progress bar */
+  border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #0073b9; /* Color of the filled bar */
+  border-radius: 4px; /* Ensure the corners match the progress bar */
 }

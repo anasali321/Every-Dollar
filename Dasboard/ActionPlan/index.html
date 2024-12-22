@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div class="containers">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">Every Dollar</div>
+      <div class="logo"><img src="../logo.png" alt=""></div>
       <ul class="nav">
           <li >
             <a href="../index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
@@ -50,10 +50,38 @@
         <span>Anas Ali</span>
       </div>
     </header>
+
+    
     
     <!-- Main Content -->
     <main class="main">
-      
+      <div class="container">
+        <h1>Your Personalized Action Plan</h1>
+        <p class="pp">"Set your goals and track your journey to success. Remember, every small step brings you closer to achieving your dreams."</p>
+
+        <div class="goal-list" id="goal-list">
+            <!-- Goals will be dynamically added here -->
+        </div>
+
+        <div class="add-goal">
+            <input type="text" id="goal-name" placeholder="Enter your goal...">
+            <input type="date" id="goal-date" placeholder="Last date">
+            <input type="number" id="goal-target" placeholder="Target value">
+            <input type="number" id="goal-progress" placeholder="Progress value">
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+
+        <div class="update-progress">
+            <input type="text" id="update-goal-name" placeholder="Goal name to update">
+            <input type="number" id="update-progress-value" placeholder="New progress value">
+            <button onclick="updateProgress()">Update Progress</button>
+        </div>
+
+        <div class="progress-graph" id="progress-graph">
+            <h3>Progress Graph</h3>
+            <div class="graph" id="graph"></div>
+        </div>
+    </div>
   </main>
 </div>
 <script src="App.js"></script>
