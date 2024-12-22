@@ -1,61 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>My Account</title>
 </head>
+
 <body>
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo">Every Dollar</div>
       <ul class="nav">
-          <li >
-            <a href="../index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
-          </li>
-          <li>
-            <a href="../Networth/index.html"><i class="fa-solid fa-coins"></i> Net Worth</a>
-          </li>
-          <li>
-            <a href="../Budget/index.html"><i class="fa-solid fa-wallet"></i> Budget</a>
-          </li>
-          <li >
-            <a href="../ActionPlan/index.html"><i class="fa-solid fa-bank"></i> Action Plan / Goals</a>
-          </li>
-          <li>
-            <a href="../FinancialReport/index.html"><i class="fa-solid fa-list-check"></i> Financial Reports</a>
-          </li>
-          <li class="active">
-            <a href="../MyAccount/index.html"><i class="fa-solid fa-user-tie "></i> My Account</a>
-          </li>
+        <li>
+          <a href="../index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="../Networth/index.html"><i class="fa-solid fa-coins"></i> Net Worth</a>
+        </li>
+        <li>
+          <a href="../Budget/index.html"><i class="fa-solid fa-wallet"></i> Budget</a>
+        </li>
+        <li>
+          <a href="../ActionPlan/index.html"><i class="fa-solid fa-bank"></i> Action Plan / Goals</a>
+        </li>
+        <li>
+          <a href="../FinancialReport/index.html"><i class="fa-solid fa-list-check"></i> Financial Reports</a>
+        </li>
+        <li class="active">
+          <a href="../MyAccount/index.html"><i class="fa-solid fa-user-tie "></i> My Account</a>
+        </li>
       </ul>
-       <!-- <div class="advisor">
+      <!-- <div class="advisor">
         <p>Speak with advisor</p>
         <button>Get started</button>
       </div>  -->
     </aside>
-    <div id="sidebar-container"></div> <!-- Placeholder for the sidebar -->
-    
-    <!-- Header -->
+    <div id="sidebar-container"></div> <!--Placeholder for the sidebar -->
+
+    Header
     <header>
       <div class="header-left">
         <h1>My Account</h1>
         <p>Wednesday, February 22, 2023</p>
       </div>
       <div class="header-right">
-        <!-- <img src="https://via.placeholder.com/40" alt="User"> -->
+        <img src="https://via.placeholder.com/40" alt="User">
         <span>Anas Ali</span>
       </div>
     </header>
-    
-    <!-- Main Content -->
+
+
+    <!-- main content -->
     <main class="main">
-      
-  </main>
-</div>
-<script src="App.js"></script>
+      <div class="Myaccount">
+        <div class="change-password-container">
+          <h2 class="change-password-heading">Change Password</h2>
+          <form id="changePasswordForm" class="change-password-form">
+            <div>
+              <div class="form-group">
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword" name="currentPassword" required>
+              </div>
+              <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+              </div>
+              <button type="submit" class="change">Change Password</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="change-password-container">
+          <h2 class="change-email-heading">Change Email</h2>
+          <form id="changeEmailForm" class="change-email-form">
+
+            <div>
+              <div class="form-group">
+                <label for="currentEmail">Current Email:</label>
+                <input type="email" id="currentEmail" name="currentEmail" required>
+              </div>
+              <div class="form-group">
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+              </div>
+              <button type="submit" class="change">Change Email</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </main>
+
+
+
+
+
+  </div>
+  <script src="App.js"></script>
 </body>
+
 </html>

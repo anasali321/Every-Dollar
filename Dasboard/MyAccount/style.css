@@ -1,82 +1,85 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Body */
-  body {
-    display: flex;
-    min-height: 100vh;
-    background: #f8f9fa;
-  }
-  
-  /* Container */
-  .container {
-    display: flex;
-    width: 100%;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background: #0073b9;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0 12px 12px 0;
-  }
-  
-  /* Sidebar Logo */
-  .sidebar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  
-  /* Sidebar Navigation */
-  .sidebar .nav {
-    list-style: none;
-  }
-  
-  .sidebar .nav li {
-    margin: 15px 0;
-  }
-  
-  .sidebar .nav li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 12px 15px;
-    display: block;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .sidebar .nav li a:hover {
-    background: #005a93;
-    border-left: 4px solid #ffc107;
-    padding-left: 20px;
-  }
-  
-  /* Active Link Styling */
-  .sidebar .nav li.active a {
-    background: #005a93;
-    color: #ffc107;
-    border-left: 4px solid #ffc107;
-    padding-left: 20px;
-  }
-  
-  /* Advisor Section */
-  /* .sidebar .advisor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #0073b9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Sidebar Logo */
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Sidebar Navigation */
+.sidebar .nav {
+  list-style: none;
+}
+
+.sidebar .nav li {
+  margin: 15px 0;
+}
+
+.sidebar .nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav li a:hover {
+  background: #005a93;
+  border-left: 4px solid #ffc107;
+  padding-left: 20px;
+}
+
+/* Active Link Styling */
+.sidebar .nav li.active a {
+  background: #005a93;
+  color: #ffc107;
+  border-left: 4px solid #ffc107;
+  padding-left: 20px;
+}
+
+/* Advisor Section */
+/* .sidebar .advisor {
     margin-top: auto;
     text-align: center;
   }
@@ -96,64 +99,154 @@
     background: #e0a800;
     transform: scale(1.05);
   } */
-  
-  /* Main Content */
-  .main {
-    flex: 1;
-    padding: 20px;
-    padding-left: 275px;
-    padding-top: 0;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    position: fixed;
-    background-color: #0073b9;
-    width: calc(100% - 250px);
-    height: 70px;
-    padding: 0 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    margin-left: 245px;
-  }
-  
-  /* Header Left */
-  header .header-left h1 {
-    font-size: 24px;
-    color: white;
-  }
-  
-  header .header-left p {
-    font-size: 14px;
-    color: #e0e0e0;
-  }
-  
-  /* Header Right */
-  header .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* header .header-right img {
+
+
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 20px;
+  padding-left: 275px;
+  padding-top: 70px;
+  width: 100%;
+
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: fixed;
+  background-color: #0073b9;
+  width: calc(100% - 250px);
+  height: 70px;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-left: 245px;
+}
+
+/* Header Left */
+header .header-left h1 {
+  font-size: 24px;
+  color: white;
+}
+
+header .header-left p {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+/* Header Right */
+header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* header .header-right img {
     border-radius: 50%;
     margin-right: 10px;
     border: 2px solid #fff;
   } */
+
+header .header-right span {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Smooth Transitions */
+.sidebar .nav li a,
+.sidebar .advisor button,
+header {
+  transition: all 0.3s ease;
+}
+
+/* Form Styles */
+.change-password-container {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center the items horizontally */
+  margin: 20px auto;
+}
+
+.change-password-form {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.change{
+  background-color: #0073b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.change-password-heading {
+  text-align: center;
+  /* margin-bottom: 20px; */
+  padding: 15px;
+  background-color: #0073b9;
+  width: 100%;
+  color: #e0e0e0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.change-email-form {
+  width: 300px; /* Adjust width as needed */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.change-email-heading {
+  text-align: center;
+  /* margin-bottom: 20px; */
+  padding: 15px;
+  background-color: #0073b9;
+  width: 100%;
+  color: #e0e0e0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   
-  header .header-right span {
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-  }
   
-  /* Smooth Transitions */
-  .sidebar .nav li a,
-  .sidebar .advisor button,
-  header {
-    transition: all 0.3s ease;
-  }
-  
+}
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.Myaccount{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-gap: 10px;
+  margin-top: 6%;
+}
