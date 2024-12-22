@@ -1,0 +1,29 @@
+Explanation:
+
+HTML Structure:
+
+Basic table structure with placeholders for data.
+downloadReport button for triggering the download.
+CSS Styling:
+
+Simple styling for the table (add your own CSS for better presentation).
+JavaScript:
+
+Fetch Data:
+fetch('/api/getFinancialReport'): This line assumes a backend API endpoint at /api/getFinancialReport that returns the necessary data in JSON format.
+Backend Responsibility: Create this API endpoint to fetch the required data from the database.
+Data Population:
+Dynamically populate the table cells with the fetched data.
+Calculate totalCost in JavaScript.
+Download Report:
+Backend Responsibility: Create another API endpoint (/api/downloadReport) that generates the PDF report on the server-side.
+Frontend: Redirect the user to the download URL provided by the backend.
+Note:
+
+This is a basic example. You'll need to:
+Implement error handling.
+Add more robust styling and formatting.
+Consider using a JavaScript PDF library (like jsPDF) for more control over the PDF generation on the frontend (if needed).
+Backend Integration:
+The success of this component heavily relies on the backend API endpoints providing the necessary data and generating the PDF report.
+This approach provides a clear separation of concerns between frontend and backend responsibilities.
